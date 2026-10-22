@@ -19,8 +19,14 @@
       toggleBtn.innerHTML = visible
         ? '<i class="bi bi-x-circle"></i> Hide Broadcast'
         : '<i class="bi bi-collection-play"></i> Watch Latest Broadcast';
-      // focus management
-      if (visible) document.getElementById('youtubeFrame').focus();
+      // Focus management — guard against a missing or detached iframe
+      if (visible) {
+        const youtubeFrame = videoSection.querySelector('#youtubeFrame');
+
+        if (youtubeFrame && youtubeFrame.isConnected) {
+          youtubeFrame.focus({ preventScroll: true });
+        }
+      }
     });
   });
 })();
