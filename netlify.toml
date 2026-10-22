@@ -298,7 +298,6 @@
 
 [context.production.environment]
   NODE_ENV = "production"
-  YOUTUBE_API_KEY = ""
   FACEBOOK_PAGE_ID = "100079670415708"
 
 [context.deploy-preview.environment]

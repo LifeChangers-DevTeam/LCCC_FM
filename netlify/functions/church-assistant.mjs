@@ -1,5 +1,10 @@
-const fs = require('fs/promises');
-const path = require('path');
+import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+import knowledgeBase from '../../lib/knowledge-base.js';
+import liveSources from '../../lib/live-sources.js';
+import openaiApi from '../../lib/openai-api.js';
 
 const {
   buildKnowledgeDocuments,
@@ -7,18 +12,18 @@ const {
   ensureArray,
   rankDocuments,
   selectContextDocuments
-} = require('../../lib/knowledge-base');
+} = knowledgeBase;
 const {
   analyzeRoute,
   applyAdaptiveSourceBoost,
   fetchRelevantLiveDocuments
-} = require('../../lib/live-sources');
+} = liveSources;
 const {
   createEmbeddings,
   createStructuredResponse
-} = require('../../lib/openai-api');
+} = openaiApi;
 
-const repoRoot = path.resolve(__dirname, '../..');
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const knowledgePath = path.join(repoRoot, 'data', 'church-knowledge.json');
 const ministryContentPath = path.join(repoRoot, 'data', 'ministry-content.json');
 const knowledgeIndexPath = path.join(repoRoot, 'data', 'church-knowledge-index.json');
@@ -43,16 +48,15 @@ const ANSWER_SCHEMA = {
 let cachedBundle = null;
 
 function jsonResponse(statusCode, body) {
-  return {
-    statusCode,
+  return new Response(JSON.stringify(body), {
+    status: statusCode,
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type'
-    },
-    body: JSON.stringify(body)
-  };
+    }
+  });
 }
 
 async function readJson(filePath) {
@@ -110,9 +114,10 @@ async function loadKnowledgeBundle() {
   return cachedBundle;
 }
 
-function parseBody(event) {
+async function parseBody(req) {
   try {
-    return JSON.parse(event.body || '{}');
+    const raw = await req.text();
+    return JSON.parse(raw || '{}');
   } catch (error) {
     return null;
   }
@@ -267,16 +272,16 @@ async function answerWithOpenAI({ question, history, selectedDocuments, knowledg
   };
 }
 
-exports.handler = async (event) => {
-  if (event.httpMethod === 'OPTIONS') {
+export default async (req) => {
+  if (req.method === 'OPTIONS') {
     return jsonResponse(200, { ok: true });
   }
 
-  if (event.httpMethod !== 'POST') {
+  if (req.method !== 'POST') {
     return jsonResponse(405, { error: 'Method not allowed' });
   }
 
-  const payload = parseBody(event);
+  const payload = await parseBody(req);
   if (!payload) {
     return jsonResponse(400, { error: 'Invalid JSON body' });
   }
@@ -286,13 +291,8 @@ exports.handler = async (event) => {
     return jsonResponse(400, { error: 'Question is too short' });
   }
 
+  // Injected at runtime by Netlify AI Gateway.
   const apiKey = process.env.OPENAI_API_KEY || '';
-  if (!apiKey) {
-    return jsonResponse(503, {
-      error: 'assistant_not_configured',
-      message: 'OPENAI_API_KEY is not configured for the server-side assistant.'
-    });
-  }
 
   try {
     const { knowledge, index, routingConfig, officialSources } = await loadKnowledgeBundle();

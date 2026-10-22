@@ -28,7 +28,7 @@ The assistant has two modes:
   Uses the local browser matcher in `js/church-assistant.js`
 
 - Server RAG mode
-  Uses `netlify/functions/church-assistant.js` plus OpenAI, the generated index, and approved live sources when appropriate
+  Uses `netlify/functions/church-assistant.mjs` plus OpenAI, the generated index, and approved live sources when appropriate
 
 ## 2. Assistant Architecture
 
@@ -39,7 +39,7 @@ The assistant has two modes:
 
 ### Server layer
 
-- `netlify/functions/church-assistant.js`
+- `netlify/functions/church-assistant.mjs`
   Handles question answering on the server
 - `lib/knowledge-base.js`
   Builds searchable documents and ranks them
@@ -267,10 +267,11 @@ Examples:
 
 ## 8. OpenAI Configuration
 
-Set these in Netlify for the server-side assistant:
+The server-side assistant runs through Netlify AI Gateway, which injects `OPENAI_API_KEY` and `OPENAI_BASE_URL` at runtime — do not set your own `OPENAI_API_KEY` in Netlify, or the gateway credentials will not be used.
+
+Optional overrides you can set in Netlify:
 
 ```bash
-OPENAI_API_KEY
 OPENAI_ASSISTANT_MODEL
 OPENAI_ASSISTANT_REASONING_EFFORT
 OPENAI_EMBEDDING_MODEL
@@ -318,7 +319,7 @@ Syntax checks:
 node --check js/church-assistant.js
 node --check js/prayer-request.js
 node --check js/knowledge-studio.js
-node --check netlify/functions/church-assistant.js
+node --check netlify/functions/church-assistant.mjs
 node --check netlify/functions/prayer-request.js
 ```
 
@@ -340,7 +341,7 @@ npm run build:knowledge-index:lexical
 
 - `js/church-assistant.js`
 - `js/prayer-request.js`
-- `netlify/functions/church-assistant.js`
+- `netlify/functions/church-assistant.mjs`
 - `netlify/functions/prayer-request.js`
 - `lib/knowledge-base.js`
 - `lib/openai-api.js`
