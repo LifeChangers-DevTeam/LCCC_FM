@@ -385,42 +385,90 @@ class YouTubeVideoLoader {
   }
 
   displayVideo(videoId) {
-    if (this.currentVideoId === videoId) {
+    const iframe = document.getElementById('youtubeFrame');
+
+    if (!iframe) {
+      console.error('[YouTube] Cannot display video: #youtubeFrame is missing');
+      return;
+    }
+
+    if (this.currentVideoId === videoId && iframe.src) {
       return; // Already displaying this video
     }
 
     this.currentVideoId = videoId;
-    const iframe = document.getElementById('youtubeFrame');
-    
-    if (iframe) {
-      const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1`;
-      iframe.src = embedUrl;
-      console.log('[YouTube] ✓ Video loaded:', videoId);
 
-      // Dispatch event for other components
-      window.dispatchEvent(new CustomEvent('youtube-video-loaded', {
-        detail: { videoId, method: this.lastMethodUsed }
-      }));
-    }
+    // Clear any previous error state and reveal the iframe
+    document.getElementById('youtubeVideoError')?.remove();
+    iframe.hidden = false;
+
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1`;
+    console.log('[YouTube] ✓ Video loaded:', videoId);
+
+    // Dispatch event for other components
+    window.dispatchEvent(new CustomEvent('youtube-video-loaded', {
+      detail: { videoId, method: this.lastMethodUsed }
+    }));
   }
 
   showError() {
     console.error('[YouTube] ❌ Failed to load video after all retries');
+
+    const wrapper = document.querySelector('.video-wrapper');
     const iframe = document.getElementById('youtubeFrame');
-    
-    if (iframe && iframe.parentElement) {
-      iframe.parentElement.innerHTML = `
-        <div style="padding: 2rem; text-align: center; background: rgba(255,255,255,0.1); border-radius: 12px;">
-          <i class="bi bi-exclamation-triangle" style="font-size: 3rem; color: #ff4c4c;"></i>
-          <p style="margin-top: 1rem; color: white;">Unable to load video</p>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">All 3 methods failed (API, Function, RSS)</p>
-          <button onclick="window.youtubeLoader.loadLatestVideo()" 
-                  style="margin-top: 1rem; padding: 10px 20px; background: #860b46; color: white; border: none; border-radius: 8px; cursor: pointer;">
-            <i class="bi bi-arrow-clockwise"></i> Retry
-          </button>
-        </div>
-      `;
+
+    if (!wrapper) {
+      console.error('[YouTube] Video wrapper not found');
+      return;
     }
+
+    // Reuse the error message instead of replacing the iframe
+    let errorBox = document.getElementById('youtubeVideoError');
+
+    if (!errorBox) {
+      errorBox = document.createElement('div');
+      errorBox.id = 'youtubeVideoError';
+      // Positioned like the iframe so it fills the aspect-ratio wrapper
+      errorBox.style.cssText = `
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+        background: rgba(255,255,255,0.1);
+        border-radius: 12px;
+        color: white;
+      `;
+      wrapper.appendChild(errorBox);
+    }
+
+    if (iframe) {
+      iframe.hidden = true;
+    }
+
+    errorBox.innerHTML = `
+      <i class="bi bi-exclamation-triangle" style="font-size: 3rem; color: #ff4c4c;"></i>
+      <p style="margin-top: 1rem;">Unable to load video</p>
+      <p style="font-size: 0.9rem; opacity: 0.7;">Please check your connection and try again.</p>
+      <button type="button" data-youtube-retry
+              style="margin-top: 1rem; padding: 10px 20px; background: #860b46; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        <i class="bi bi-arrow-clockwise"></i> Retry
+      </button>
+    `;
+
+    errorBox.querySelector('[data-youtube-retry]').addEventListener('click', () => {
+      errorBox.remove();
+
+      if (iframe) {
+        iframe.hidden = false;
+      }
+
+      this.retryCount = 0;
+      this.loadLatestVideo();
+    });
   }
 
   // Manual method switcher for testing
