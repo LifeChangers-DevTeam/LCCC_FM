@@ -1,0 +1,41 @@
+{
+  "cacheTtlSeconds": 900,
+  "sources": [
+    {
+      "id": "official-contact-page",
+      "type": "web-page",
+      "title": "Liberty Bookstore Contact Page",
+      "url": "https://www.lcccstore.com/en-us/pages/contact-us",
+      "topics": ["contact", "phone", "email", "location", "address", "social", "church"],
+      "trust": "high",
+      "extractHints": ["CHURCH LOCATION", "CONTACT DETAILS", "SOCIAL MEDIA"]
+    },
+    {
+      "id": "official-bookstore-home",
+      "type": "web-page",
+      "title": "Liberty Bookstore Home",
+      "url": "https://www.lcccstore.com/en-us",
+      "topics": ["book", "bookstore", "resource", "publication", "new release", "store"],
+      "trust": "high",
+      "extractHints": ["New Releases", "Welcome to Liberty Bookstore"]
+    },
+    {
+      "id": "life-changers-tv",
+      "type": "youtube-feed",
+      "title": "Life Changers TV Latest Videos",
+      "url": "https://www.youtube.com/@lifechangers_tv",
+      "channelId": "UCqKbyuM7cqlZGUZCeaVssjw",
+      "topics": ["youtube", "video", "broadcast", "watch", "latest", "live", "sermon"],
+      "trust": "high"
+    },
+    {
+      "id": "lccc-facebook-feed",
+      "type": "facebook-feed",
+      "title": "Life Changing Christian Church Facebook Feed",
+      "url": "https://facebook.com/156055814564596",
+      "pageId": "156055814564596",
+      "topics": ["facebook", "announcement", "event", "program", "service", "update", "latest"],
+      "trust": "high"
+    }
+  ]
+}

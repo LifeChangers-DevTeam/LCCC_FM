@@ -1,0 +1,27 @@
+{
+  "sectionTitle": "Weekly Update",
+  "subtitle": "Stay up to date",
+  "started": "November 1st, 2025",
+  "items": [
+    {
+      "image": "resources/WordInTheLot0.1.jpg",
+      "title": "Word of the Week",
+      "active": true
+    },
+    {
+      "image": "resources/New_release.jpg",
+      "title": "New Publication Release",
+      "active": true
+    },
+    {
+      "image": "resources/academy_christmas_play_ad.jpg",
+      "title": "Christmas Message",
+      "active": true
+    },
+    {
+      "image": "resources/WeeklyPrayers.jpg",
+      "title": "Prayer of the Week",
+      "active": true
+    }
+  ]
+}

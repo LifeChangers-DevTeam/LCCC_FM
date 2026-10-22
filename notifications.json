@@ -1,0 +1,29 @@
+{"title": "Weekly Update",
+
+  "items":[
+  {
+    "image": "resources/WordInTheLot.jpg",
+    "title": "Word of the Week",
+    "message": "Be renewed by the Word. Meditate, apply, and walk in power.",
+    "active": true
+  }
+  {
+    "image": "resources/New_release.jpg",
+    "title": "New Release",
+    "message": "PowerShift V2 & Pathway To Power now available at Liberty Book Store.",
+    "active": true
+  }
+  {
+    "image": "resources/ChristmasNote.jpg",
+    "title": "Christmas Message",
+    "message": "A season of Joy and gifts, a season to remember the Love of God.",
+    "active": true
+  }
+  {
+    "image": "resources/WeaklyPrayers.jpg",
+    "title": "Prayer of the Week",
+    "message": "A prayerful christian is a powerful christian, P.U.S.H.",
+    "active": true
+    }
+  ]
+}

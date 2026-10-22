@@ -1,0 +1,61 @@
+{
+  "currentInfoTokens": [
+    "announcement",
+    "current",
+    "event",
+    "latest",
+    "live",
+    "new",
+    "news",
+    "recent",
+    "schedule",
+    "service times",
+    "today",
+    "update",
+    "weekly"
+  ],
+  "intents": [
+    {
+      "id": "contact_location",
+      "keywords": ["address", "contact", "direction", "email", "find", "location", "map", "phone", "reach", "whatsapp", "where"],
+      "preferLiveSources": true,
+      "prioritizeKnowledge": false,
+      "sourceBoost": 5
+    },
+    {
+      "id": "media_broadcast",
+      "keywords": ["broadcast", "channel", "listen", "livestream", "radio", "recent", "sermon", "stream", "video", "watch", "youtube"],
+      "preferLiveSources": true,
+      "prioritizeKnowledge": false,
+      "sourceBoost": 6
+    },
+    {
+      "id": "bookstore_resources",
+      "keywords": ["book", "bookstore", "manual", "new release", "publication", "resource", "resources", "store"],
+      "preferLiveSources": true,
+      "prioritizeKnowledge": false,
+      "sourceBoost": 5
+    },
+    {
+      "id": "social_announcements",
+      "keywords": ["announcement", "event", "facebook", "instagram", "latest", "news", "program", "social", "update", "x", "twitter"],
+      "preferLiveSources": true,
+      "prioritizeKnowledge": false,
+      "sourceBoost": 6
+    },
+    {
+      "id": "prayer_care",
+      "keywords": ["anxiety", "counseling", "comfort", "deliverance", "healing", "peace", "pray", "prayer", "support"],
+      "preferLiveSources": false,
+      "prioritizeKnowledge": true,
+      "sourceBoost": 2
+    },
+    {
+      "id": "doctrine_ministry",
+      "keywords": ["baptism", "born again", "deliverance", "fasting", "mission", "salvation", "spiritual growth", "vision", "warfare", "what is lccc"],
+      "preferLiveSources": false,
+      "prioritizeKnowledge": true,
+      "sourceBoost": 2
+    }
+  ]
+}

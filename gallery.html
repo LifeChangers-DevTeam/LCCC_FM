@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NRMJ28VE7Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NRMJ28VE7Y');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Life Changers Family Radio</title>
+  <link rel="icon" type="image/png" href="resources/favicon.ico" sizes="32x32" >
+  <link rel="icon" type="image/png" href="resources/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="resources/favicon.svg" />
+<link rel="shortcut icon" href="resources/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="LCCC FM" />
+<link rel="manifest" href="resources/site.webmanifest" />
+  
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main_css.css">
+  
+  <!-- Gallery CSS -->
+  <link rel="stylesheet" href="css/gallery.css">
+  
+  <!-- Lightbox CSS -->
+  <link rel="stylesheet" href="css/carousel-lightbox.css">
+  
+  <meta name="theme-color" content="#860b46">
+  <meta name="description" content="Explore our latest posts and updates from Life Changers Christian Church">
+
+  <script>
+  window.__YOUTUBE_API_KEY__ = '__YOUTUBE_API_KEY__';
+  window.__FACEBOOK_CONFIG__ = {
+    token: '__FACEBOOK_ACCESS_TOKEN__',
+    pageId: '__FACEBOOK_PAGE_ID__'
+  };
+</script>
+</head>
+<body class="gallery-page">
+
+  <!-- Background -->
+  <div class="background">
+    <img src="resources/background.png" alt="background">
+  </div>
+
+  <!-- Navigation -->
+  <nav class="gallery-nav">
+    <div class="nav-container">
+        <div class="brand-header">
+          <img class="brand-logo" src="resources/Family FM Logo.png" alt="LCCC Family FM logo">
+        </div>
+      <a href="index.html" class="nav-back">
+        <i class="fa-solid fa-arrow-left"></i> Back to Radio
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="gallery-container">
+    
+    <!-- Header -->
+    <header class="gallery-header">
+      <h1>
+        
+        Our Gallery
+      </h1>
+      <p class="gallery-subtitle">Latest updates from Life Changers Christian Church</p>
+      
+      <!-- Filter Buttons -->
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-grip"></i> All Posts
+        </button>
+        <button class="filter-btn" data-filter="recent">
+          <i class="fa-solid fa-clock"></i> Recent
+        </button>
+        <button class="filter-btn" data-filter="photos">
+          <i class="fa-solid fa-image"></i> Photos
+        </button>
+        <button class="filter-btn" data-filter="videos">
+          <i class="fa-solid fa-video"></i> Videos
+        </button>
+      </div>
+
+      <!-- Refresh Button -->
+      <button class="refresh-btn" id="refreshBtn" title="Refresh gallery">
+        <i class="fa-solid fa-rotate"></i>
+      </button>
+    </header>
+
+    <!-- Loading State -->
+    <div class="loading-state" id="loadingState">
+      <div class="loader">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+      </div>
+      <p>Loading posts from Facebook...</p>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <i class="fa-solid fa-images"></i>
+      <h3>No posts yet</h3>
+      <p>Check back soon for updates!</p>
+    </div>
+
+    <!-- Error State -->
+    <div class="error-state" id="errorState" style="display: none;">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <h3>Unable to load posts</h3>
+      <p id="errorMessage">Please check your connection and try again.</p>
+      <button class="retry-btn" onclick="window.galleryManager.loadPosts()">
+        <i class="fa-solid fa-rotate-right"></i> Retry
+      </button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Gallery items will be inserted here dynamically -->
+    </div>
+
+  </div>
+
+  <!-- Lightbox (reusing existing component) -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay"></div>
+
+    <div class="lightbox-container">
+      <!-- Close Button -->
+      <button class="lightbox-close" aria-label="Close lightbox">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Zoom Controls -->
+      <div class="lightbox-zoom-controls">
+        <button class="zoom-btn zoom-in" aria-label="Zoom in">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <button class="zoom-btn zoom-out" aria-label="Zoom out">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+        <button class="zoom-btn zoom-reset" aria-label="Reset zoom">
+          <i class="fa-solid fa-expand"></i>
+        </button>
+      </div>
+
+      
+      <!-- Media Container (Image + Video) -->
+<div class="lightbox-image-wrapper">
+  <!-- Image -->
+  <img src="" alt="" class="lightbox-image" id="lightboxImage">
+  
+  <!-- Video (ADD THIS!) -->
+  <video class="lightbox-video" controls style="display: none;">
+    <source src="" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+      <!-- Navigation Buttons -->
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="lightbox-nav lightbox-next" aria-label="Next image">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Image Info -->
+      <div class="lightbox-info">
+  <h3 class="lightbox-title" id="lightboxTitle"></h3>
+  <p class="lightbox-description lightbox-caption" id="lightboxDescription"></p>
+  <span class="lightbox-counter lightbox-date" id="lightboxCounter"></span>
+</div>
+    </div>
+  </div>
+
+ <footer class="site-footer glass-box lc-footer">
+  <div class="lc-footer-content">
+    
+   
+
+    <!-- Social Section -->
+    
+
+     <!-- Partner Links Section -->
+<div class="lc-footer-text">
+ <h5><i>Life Changing</i> Christian Church</h5>
+</div>
+    <div class="lc-footer-partners">
+     
+
+      <a href="https://www.lcccstore.com" target="_blank" rel="noopener noreferrer" class="partner-link bookstore-link" title="Visit LCCC Bookstore">
+        <img src="resources/liberty_logo.avif" alt="LCCC Bookstore" class="partner-logo">
+        <!-- Alternative: use .png if you have a PNG logo -->
+        <!-- <img src="resources/lccc-store-logo.png" alt="LCCC Bookstore" class="partner-logo"> -->
+        <span>Bookstore</span>
+      </a>
+      <div class="partner-divider"></div>
+      <div class="namibia-flag" title="Proudly Namibian">
+        <img src="resources/nam-logo.png" alt="Namibia Flag" class="flag-logo">
+        <span>Namibia</span>
+      </div>
+    </div>
+
+    <div class="lc-social-section">
+      <ul class="lc-social-links">
+        <li><a class="yt" href="https://www.youtube.com/@lifechangers_tv" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a></li>
+        <li><a class="fb" href="https://facebook.com/156055814564596" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a></li>
+        <li><a class="ig" href="https://instagram.com/lifechangershq" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a></li>
+        <li><a class="tw" href="https://twitter.com/lifechangershq" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a></li>
+      </ul>
+
+    </div>
+
+    <!-- Copyright -->
+    <p class="lc-footer-copy">
+      © <span id="year"></span> Life Changing Christian Church | Powered By LCCC Tech Team
+    </p>
+  </div>
+</footer>
+
+  <!-- Bootstrap Icons (for social icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Scripts - Combined file with both GalleryLightbox and FacebookGalleryManager -->
+  <script src="js/facebook-gallery-complete.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+{
+  "welcome": "Welcome to Life Changing Christian Church (LCCC) — We Are Life Changers! Ask about church services, prayer support, deliverance programs, broadcasts, ministry resources, salvation, or how to get connected with the ministry.",
+
+  "fallback": "I don't yet have enough approved ministry knowledge to answer that accurately. Please contact the church office at (+264) 061-309876, email lifechangers77@gmail.com, or visit us at Deliverance House, Katutura, Windhoek.",
+
+  "suggestedQuestions": [
+    "How can I become born again?",
+    "How can I request prayer or counseling?",
+    "What is Life Changing Christian Church?",
+    "How do I watch the latest broadcast?",
+    "Where is the church and how can I contact you?",
+    "How can I watch the latest broadcast and listen to LCCC FM?",
+    "Which ministry books talk about stubborn problems and bewitchment?",
+    "Does the church have deliverance services?",
+    "Where is the church located?",
+    "Where can I find ministry books?",
+    "How can I contact the church?"
+  ],
+
+  "entries": [
+
+    {
+      "title": "About Life Changing Christian Church",
+      "answer": "Life Changing Christian Church (LCCC) — motto: 'We Are Life Changers' — is a Full Gospel Bible-believing church. Our mandate is to take the gospel of Jesus Christ to all people and to witness the visible manifestation of God's power to rescue and transform lives through salvation, prayer, holiness, deliverance, and sound biblical teaching.",
+      "keywords": ["church", "lccc", "life changing christian church", "about", "vision", "mission", "belief", "full gospel", "bible believing", "life changers", "who are you", "what is lccc", "we are life changers", "motto"]
+    },
+
+    {
+      "title": "Church Founder and Leadership",
+      "answer": "Life Changing Christian Church was founded by Pastor Isaac Onwordi, who serves as the Senior Pastor of the ministry. Pastor Marcel Onwordi handles the design and layout for the church's extensive publications.",
+      "keywords": ["founder", "pastor", "leadership", "isaac onwordi", "senior pastor", "church leader", "who founded", "who started", "pastor isaac", "pastor marcel", "marcel onwordi", "head of church", "who leads", "leader"]
+    },
+
+    {
+      "title": "Church Vision",
+      "answer": "The vision of LCCC is to rescue and transform lives through sound teaching of the Word of God, fasting, prayer, deliverance ministration, holiness, and a personal commitment to Jesus Christ — the eternal head of the church.",
+      "keywords": ["vision", "purpose", "calling", "mission vision", "transform lives", "why lccc exists"]
+    },
+
+    {
+      "title": "Church Mission",
+      "answer": "LCCC seeks to evangelise the world through the life-changing power of God Almighty and to preach deliverance from captivity in order to set free those who are afflicted.",
+      "keywords": ["mission", "evangelism", "deliverance", "gospel", "preaching", "set free", "mandate", "captivity", "afflicted"]
+    },
+
+    {
+      "title": "Church Location",
+      "answer": "Life Changing Christian Church is located at Deliverance House, Erf 531, Corner of David Goraseb and Invokavit Streets (opposite Woermann Brock Masego), Gemeente 1, Katutura, Windhoek, Namibia. Postal address: P.O. Box 26732, Windhoek, Namibia.",
+      "keywords": ["location", "address", "where", "church location", "windhoek", "katutura", "deliverance house", "directions", "find the church", "erf 531", "woermann brock", "gemeente", "po box", "postal"],
+      "relatedQuestions": ["How can I contact the church?", "How do I join or get connected?"],
+      "synonyms": ["where is the church", "how do I find the church", "church address in windhoek"]
+    },
+
+    {
+      "title": "Contact Information",
+      "answer": "You can contact Life Changing Christian Church through:\n📞 Office: (+264) 061-309876\n📱 Mobile: (+264) 085-5515495\n✉️ Email: lifechangers77@gmail.com\n\nYou are also welcome to visit us at Deliverance House, Katutura, Windhoek during church hours.",
+      "keywords": ["contact", "phone", "email", "office", "call", "reach", "support", "number", "how to contact", "get in touch", "telephone", "mobile"],
+      "relatedQuestions": ["Where is the church located?", "How can I request prayer or counseling?"],
+      "synonyms": ["church phone number", "church email address", "how can I reach the church"]
+    },
+
+    {
+      "title": "Salvation and Becoming Born Again",
+      "answer": "LCCC teaches that being born again is the most important step in your spiritual life. It involves:\n1. Confessing your sins to God\n2. Renouncing the devil and all his works\n3. Accepting Jesus Christ as your Lord and Saviour\n\nWould you like to pray the salvation prayer right now? Just ask and I'll guide you through it! 🙏",
+      "keywords": ["saved", "salvation", "born again", "jesus", "repent", "repentance", "christ", "saviour", "save me", "how to be saved", "accept jesus", "give my life", "give life to christ", "become christian", "new life", "eternal life"]
+    },
+
+    {
+      "title": "Salvation Prayer",
+      "answer": "We're so glad you want to receive Jesus! 🙏\n\nRepeat this prayer sincerely:\n\n\"Almighty Father, I come to You in Jesus name, confessing my sins, renouncing the devil and his ways, and accepting Jesus Christ Your Son to be my Lord and Saviour. I believe with all my heart that Jesus died for my sins and was raised from the dead and now confess Him as my Lord and Saviour. I declare that I am born again. Amen!\"\n\nConfession after salvation:\n\"Father, now that I am reborn, graciously fill me with Your precious Holy Spirit and with fire so that I can faithfully serve Christ forever, in Jesus name. Amen!\"\n\n🎉 Welcome to God's family! Please contact the church so we can walk this journey with you: (+264) 061-309876 or lifechangers77@gmail.com",
+      "keywords": ["salvation prayer", "sinner's prayer", "prayer to be saved", "accept jesus prayer", "receive christ", "born again prayer", "pray for salvation", "want to be saved", "how do i pray for salvation"]
+    },
+
+    {
+      "title": "Baptism",
+      "answer": "LCCC teaches biblical water baptism as an important and obedient step of faith after salvation. Baptism is an outward declaration of an inward transformation. The church provides ministry teachings and pastoral guidance for those who wish to be baptised. Contact the office to arrange your baptism.",
+      "keywords": ["baptism", "water baptism", "faith", "saved", "christian baptism", "get baptised", "baptize", "baptized", "immersion", "baptism guidance"]
+    },
+
+    {
+      "title": "Church Services",
+      "answer": "Church services at LCCC include Miracle, Healing, and Deliverance services featuring sound biblical teaching, prayer, worship, and 'Testimony Time' — where members share accounts of divine intervention. Services are spiritually charged and focused on the visible power of God.",
+      "keywords": ["service", "worship", "church service", "teaching", "testimony", "deliverance service", "healing", "miracle service", "testimony time", "what happens in service"]
+    },
+
+    {
+      "title": "Service Times and Schedule",
+      "answer": "For current service times, special programs, and event schedules, please contact the church office at (+264) 061-309876 or follow LCCC on Facebook and YouTube (Life Changers TV) for the latest announcements.",
+      "keywords": ["service time", "schedule", "when", "sunday", "time", "program", "event", "meeting", "what time", "church hours", "weekend service", "weekday service"],
+      "relatedQuestions": ["Does the church have deliverance services?", "How can I contact the church?"],
+      "synonyms": ["church service schedule", "what time is church", "upcoming church programs"]
+    },
+
+    {
+      "title": "Holy Ghost Nights and Deliverance Programs",
+      "answer": "LCCC regularly conducts:\n• Holy Ghost Night Services (night vigils)\n• 24-Hour Deliverance Programs\n• Women's Conferences\n• Large-scale Deliverance Crusades\n• Midnight and early morning prayer sessions\n\nThese gatherings are dedicated to prayer, spiritual restoration, healing, and breakthrough. Check with the church office for upcoming dates.",
+      "keywords": ["holy ghost", "night service", "deliverance", "revival", "healing", "breakthrough", "24 hour prayer", "night vigil", "crusade", "women conference", "midnight prayer", "early morning prayer", "prayer night", "vigil"]
+    },
+
+    {
+      "title": "Prayer Requests and Counseling",
+      "answer": "You can request prayer or Christian counseling by:\n📱 WhatsApp: https://wa.me/264817813918\n📞 Phone: (+264) 061-309876\n✉️ Email: lifechangers77@gmail.com\n\nPastor Isaac Onwordi personally provides Christian counseling for those facing spiritual difficulties or seeking guidance. The prayer team follows up during church office hours.",
+      "keywords": ["prayer", "pray", "request", "support", "help", "counselling", "counseling", "prayer request", "need prayer", "pray for me", "intercession", "pastoral support", "spiritual help", "i need help", "counselor"],
+      "relatedQuestions": ["Can you pray for healing?", "How can I contact the church?"],
+      "synonyms": ["I need someone to pray for me", "how do I send a prayer request", "how do I get counseling"]
+    },
+
+    {
+      "title": "Prayer for Healing",
+      "answer": "Let us pray together. 🙏\n\n\"Heavenly Father, I come before You believing in Your healing power. Your Word declares in Psalm 103:3 that You heal all our diseases. I stand on Your promise. Let Your healing flow right now — spirit, soul, and body — in the name of Jesus.\n\nEvery messenger of sickness and death in my body, come out and die now. Blood of Jesus mix with Holy Ghost fire and purge me of all evil deposits. I shall not die but live to declare the works of the Lord. Amen.\"\n\nShare your healing request with our prayer team on WhatsApp: https://wa.me/264817813918",
+      "keywords": ["heal", "healing", "sick", "sickness", "health", "pain", "disease", "pray for healing", "healing prayer", "i am sick", "need healing", "miracle healing", "medical", "doctor", "bewitched health", "strange sickness", "stubborn sickness"]
+    },
+
+    {
+      "title": "Prayer for Peace and Comfort",
+      "answer": "You are not alone. Let us pray. 🙏\n\n\"Father God, I bring this burdened heart before You. Your Word says in Philippians 4:7 that Your peace surpasses all understanding. Quiet every storm in my mind and heart. Let Your peace guard my heart and mind through Christ Jesus. Amen.\"\n\nReach out to our prayer team anytime — we are here for you.",
+      "keywords": ["peace", "comfort", "anxious", "anxiety", "worried", "stress", "troubled", "fear", "afraid", "overthinking", "restless", "no peace", "inner peace", "calm"]
+    },
+
+    {
+      "title": "Prayer for Deliverance",
+      "answer": "If you are facing spiritual bondage, oppression, or any form of captivity, LCCC believes in the power of God to set you completely free. 🙏\n\n\"In the name of Jesus, I break every evil covenant and yoke of bondage upon my life. Every chain of oppression is broken by fire. Every power holding me captive, release me now. I declare that the blood of Jesus sets me completely free. Amen.\"\n\nWe strongly encourage you to connect with our deliverance team directly: (+264) 061-309876",
+      "keywords": ["deliverance", "bondage", "oppression", "evil spirit", "witchcraft", "spiritual attack", "set free", "freedom", "captivity", "possessed", "tormented", "demonic", "occult", "deliverance prayer", "need deliverance", "spiritual warfare", "coven", "strongman", "yoke", "chains", "captive"]
+    },
+
+    {
+      "title": "Struggling or Going Through Difficulty",
+      "answer": "We hear you, and God sees every detail of what you're facing. 💛\n\nIsaiah 41:10 says: 'Fear not, for I am with you; be not dismayed, for I am your God.'\n\nYou don't have to face this alone. Pastor Isaac teaches that stubborn problems are cases the enemy sponsors — but every chain can be broken through aggressive, faith-filled prayer. Our prayer team is ready to stand with you.\n\nSend us a prayer request on WhatsApp: https://wa.me/264817813918 — or call us at (+264) 061-309876.",
+      "keywords": ["struggling", "difficult", "hard time", "hopeless", "lost", "broken", "depressed", "help me", "going through", "pain", "suffering", "hurt", "heartbroken", "lonely", "problem", "crisis", "overwhelmed", "giving up", "stubborn problem"]
+    },
+
+    {
+      "title": "How to Join or Get Connected",
+      "answer": "To become part of the LCCC family:\n• Visit us at Deliverance House, Gemeente 1, Katutura, Windhoek\n• Attend any of our services or programs\n• Call us at (+264) 061-309876\n• Email: lifechangers77@gmail.com\n\nYou are always welcome — come as you are!",
+      "keywords": ["join", "member", "membership", "connect", "part of", "get involved", "new here", "how to join", "become member", "first time", "visitor", "new to church", "i want to join"],
+      "relatedQuestions": ["Where is the church located?", "What happens in church services?"],
+      "synonyms": ["I want to visit the church", "how can I become a member", "how do I start attending"]
+    },
+
+    {
+      "title": "Online Broadcasts and Livestreams",
+      "answer": "LCCC broadcasts ministry services online through Life Changers TV on YouTube (@Lifechangers_TV). The channel hosts over 1,400 videos including live services, Miracle and Healing services, Deliverance programs, and archived teachings.",
+      "keywords": ["youtube", "livestream", "broadcast", "online service", "watch", "live", "life changers tv", "video", "stream", "online church", "watch online"],
+      "relatedQuestions": ["How do I watch the latest broadcast?", "How can I listen to LCCC FM?"],
+      "synonyms": ["watch church online", "church livestream", "online ministry broadcast"]
+    },
+
+    {
+      "title": "Latest Broadcast",
+      "answer": "To watch the latest ministry broadcast, visit the official Life Changers TV YouTube channel: @Lifechangers_TV. You can also check the 'Watch Latest Broadcast' section on the LCCC website for the newest services and archived sermons.",
+      "keywords": ["latest", "watch", "video", "broadcast", "youtube", "service", "sermon", "latest video", "new broadcast", "recent service", "watch latest"],
+      "relatedQuestions": ["How can I listen to LCCC FM?", "What social media platforms does the church use?"],
+      "synonyms": ["newest sermon", "most recent broadcast", "latest service video"]
+    },
+
+    {
+      "title": "LCCC FM and Life Changers Family Radio",
+      "answer": "LCCC FM and Life Changers Family Radio provide ministry audio broadcasting — including live teachings, worship, spiritual programs, and announcements — for listeners both locally in Namibia and internationally. The church has historically conducted 24-hour deliverance radio programs.",
+      "keywords": ["radio", "fm", "broadcast", "listen", "stream", "lccc fm", "life changers family radio", "audio", "radio program", "online radio"],
+      "relatedQuestions": ["How do I watch the latest broadcast?", "What does the church broadcast online?"],
+      "synonyms": ["listen to church radio", "audio stream", "family fm"]
+    },
+
+    {
+      "title": "Social Media Platforms",
+      "answer": "Stay connected with Life Changing Christian Church through:\n• 📺 YouTube: Life Changers TV (@Lifechangers_TV)\n• 📘 Facebook: Life Changing Christian Church\n• 💬 WhatsApp Channel: for updates and content\n\nFollow us for service updates, announcements, and ministry content.",
+      "keywords": ["facebook", "youtube", "social media", "whatsapp", "online", "media", "follow", "social", "connect online", "find on facebook", "youtube channel"]
+    },
+
+    {
+      "title": "Bookstore and Ministry Resources",
+      "answer": "Pastor Isaac Onwordi has authored over 35 publications, including:\n• PowerShift — How to Provoke Divine Solutions to Your Problems\n• Prayers for Warriors\n• Deliverance from Bewitchment, Spells and Charms\n• Deliverance Series and Believers Manuals\n\nAll resources are available through the Liberty Bookstore at lcccstore.com.",
+      "keywords": ["book", "books", "bookstore", "resource", "store", "teaching", "materials", "liberty bookstore", "lcccstore", "publications", "deliverance series", "prayers for warriors", "powershift", "believers manual", "pastor isaac books", "where to buy books", "ministry books", "bewitchment book"],
+      "relatedQuestions": ["What is Power Shift?", "What is the Bewitchment Book?"],
+      "synonyms": ["where can I buy ministry books", "church bookstore", "pastor isaac publications"]
+    },
+
+    {
+      "title": "Tithes, Offerings, and Giving",
+      "answer": "LCCC encourages believers to support the work of God through faithful tithes, offerings, and partnership giving as acts of worship and obedience. Visit the Giving section on the LCCC website or contact the church office for giving options and banking details.",
+      "keywords": ["tithe", "offering", "giving", "donation", "partner", "support", "financial support", "sow", "seed", "partner with church", "how to give", "give online"],
+      "relatedQuestions": ["How can I contact the church?", "How do I join or get connected?"],
+      "synonyms": ["how can I donate", "how do I support the ministry", "church giving details"]
+    },
+
+    {
+      "title": "Spiritual Growth",
+      "answer": "LCCC encourages spiritual growth through:\n• Daily Bible study and meditation\n• Prayer and fasting\n• Holiness and righteous living\n• Evangelism and soul-winning\n• Commitment to the teachings of Jesus Christ\n\nAttend our services, connect with a pastor, and make use of ministry resources at lcccstore.com to grow in your walk with God.",
+      "keywords": ["grow", "spiritual growth", "bible study", "fasting", "prayer", "holiness", "discipleship", "mature", "faith", "how to grow spiritually", "christian growth"],
+      "relatedQuestions": ["How can I become born again?", "Where can I find ministry books?"],
+      "synonyms": ["how do I grow in faith", "how do I grow spiritually", "christian maturity"]
+    },
+
+    {
+      "title": "Women's Ministry and Conferences",
+      "answer": "LCCC hosts Women's Conferences as part of its special ministry programs. These events are dedicated to empowering, encouraging, and spiritually equipping women in their faith walk. Contact the church office for information on upcoming women's events.",
+      "keywords": ["women", "women ministry", "women conference", "ladies", "sisters", "female ministry", "women event"]
+    },
+
+    {
+      "title": "Spiritual Warfare and Prayer",
+      "answer": "LCCC places a strong emphasis on spiritual warfare through midnight and early morning prayers. Pastor Isaac teaches in PowerShift that 'the kingdom of God is not a matter of talk but of power' (1 Corinthians 4:20). The believer must fight with knowledge, strategy, and aggressive faith to shift the balance of power from the oppressor to the oppressed.",
+      "keywords": ["spiritual warfare", "warfare prayer", "midnight prayer", "early morning prayer", "intercession", "fasting and prayer", "principalities", "powers", "armor of god", "fight in spirit", "prayer warfare", "powershift"]
+    },
+
+    {
+      "title": "What is Power Shift?",
+      "answer": "PowerShift is a ministry book by Pastor Isaac Onwordi that teaches how to provoke divine solutions to your problems through aggressive, knowledge-based spiritual warfare prayers. The book covers:\n• Spiritual warfare terms and concepts\n• Satanic devices and weapons\n• Deliverance of your destiny and foundation\n• Breaking difficult and prolonged situations\n• Power over witchcraft, evil dreams, and evil dedications\n• Prayers for healing and complete deliverance\n\nAvailable at lcccstore.com.",
+      "keywords": ["powershift", "power shift", "book", "pastor isaac book", "divine solutions", "spiritual warfare book", "deliverance book", "how to pray", "warfare prayers"]
+    },
+
+    {
+      "title": "What is Prayers for Warriors?",
+      "answer": "Prayers for Warriors is a powerful ministry book by Pastor Isaac Onwordi, written for believers who are tired of being defeated by the enemy. It teaches that a spiritual warrior must:\n• Plan and prepare before engaging the enemy\n• Put on the full armor of God (Ephesians 6:12-19)\n• Target the strongman — the principal demon — not just junior spirits (Matthew 12:29)\n• Pray to win and never accept defeat\n\nThe book contains over 50 targeted prayer sections including: Arresting Coven Powers, Breaking Collective Bondages, Deliverance of the Mind, Power Over Fear, General Deliverance, and much more. Available at lcccstore.com.",
+      "keywords": ["prayers for warriors", "warrior prayers", "prayer book", "spiritual warrior", "how to fight spiritually", "deliverance prayers", "pastor isaac book", "combat prayer", "prayer manual"]
+    },
+
+    {
+      "title": "What is the Bewitchment Book?",
+      "answer": "Deliverance from Bewitchment, Spells and Charms is a book by Pastor Isaac Onwordi that exposes the reality of spiritual bewitchment. To be bewitched is to be disabled from God's will and purpose for your life — rendered incapable of fulfilling your destiny.\n\nThe book covers:\n• How to handle charms and spells\n• Bewitched behaviors, finances, marriage, and destiny\n• Bewitched health and body parts\n• Academic bewitchment\n• Prayers for total deliverance in every area\n\nAvailable at lcccstore.com.",
+      "keywords": ["bewitchment", "bewitched", "spells", "charms", "witchcraft", "bewitchment book", "deliverance from bewitchment", "spell breaking", "charm", "curse", "hex", "pastor isaac book", "how to break bewitchment"]
+    },
+
+    {
+      "title": "Foundational Problems and Bloodline Bondages",
+      "answer": "Pastor Isaac Onwordi teaches in PowerShift that your foundation is your bloodline — your ancestors, the family you were born into, and the spiritual powers over the land of your birth. Signs of foundational bondage include: repeated family patterns of failure, poverty, broken marriages, or early death.\n\nThe good news is that through the blood of Jesus and targeted deliverance prayers, every foundational bondage can be broken. LCCC conducts specific deliverance programs for foundational issues.\n\nContact us at (+264) 061-309876.",
+      "keywords": ["foundation", "foundational", "bloodline", "ancestral", "generational curse", "family curse", "inherited", "lineage", "ancestors", "family pattern", "generational bondage", "bloodline deliverance"]
+    },
+
+    {
+      "title": "Breaking Stubborn and Prolonged Problems",
+      "answer": "Pastor Isaac defines stubborn problems as troubles that will not go away — cases that mock your God and follow you year after year, supervised by a territorial or household strongman.\n\nThe strategy from PowerShift:\n1. High-level, aggressive prayer and fasting\n2. Targeting the strongman in charge (Matthew 12:29)\n3. Sustained, consistent intercession — giving God no rest (Isaiah 62:6-7)\n4. Seeking full deliverance ministration at LCCC\n\nContact the church: (+264) 061-309876.",
+      "keywords": ["stubborn problem", "prolonged problem", "problem that won't go", "stuck", "nothing working", "years of struggle", "persistent problem", "strongman", "break stronghold", "how to break stubborn problem"]
+    },
+
+    {
+      "title": "Bewitchment of Finances",
+      "answer": "Pastor Isaac teaches in the Bewitchment book that financial bewitchment can manifest as: money that disappears without explanation, inability to hold money, reckless spending, poverty cycles, and dreams of losing money or having an empty purse.\n\nPrayer for Financial Breakthrough:\n\"Every charm placed on my finances, catch fire and die in Jesus name. Every power wasting my money, die by fire in Jesus name. Every curse troubling my finances, be annulled by fire in Jesus name. Every embargo on my financial life, break and scatter now in Jesus name. Amen.\"\n\nFor targeted deliverance: (+264) 061-309876.",
+      "keywords": ["financial bewitchment", "money problems", "financial bondage", "poverty", "money disappearing", "financial struggle", "broke", "can't save money", "financial deliverance", "blessing thieves", "financial curse"]
+    },
+
+    {
+      "title": "Marital Bewitchment and Delayed Marriage",
+      "answer": "Pastor Isaac Onwordi teaches that marital bewitchment can hinder people from marrying or cause marital crises. Signs include: unexplained rejection in relationships, repeated failed relationships, and inability to find or keep a spouse.\n\nPrayer:\n\"Every evil covenant blocking my marriage, break and release me by fire in Jesus name. Every spirit of marital delay, your time is up, die now in Jesus name. I receive my divine marriage partner by fire in Jesus name. Amen.\"\n\nFor counseling and deliverance: (+264) 061-309876.",
+      "keywords": ["marital bewitchment", "delayed marriage", "marriage problems", "can't find spouse", "relationship problems", "blocked marriage", "evil covenant marriage", "spiritual husband", "spiritual wife", "marine spirit", "marriage deliverance", "no marriage", "why am i not married"]
+    },
+
+    {
+      "title": "Destiny Bewitchment and Limiting Powers",
+      "answer": "Pastor Isaac teaches in PowerShift that limiting powers are evil spirits whose job is to frustrate every good thing in your life. God declares in Jeremiah 29:11: 'I know the plans I have for you — plans to prosper you and not to harm you.'\n\nSigns of destiny bewitchment include: consistent failure despite effort, stagnation, the spirit of 'almost there' — getting close to breakthrough but never arriving.\n\nPrayer: \"Every limiting power assigned to frustrate my destiny, die by fire in Jesus name. I break free from every evil program against my purpose in Jesus name. My destiny is restored by the blood of Jesus. Amen.\"",
+      "keywords": ["destiny", "limiting power", "destiny bewitchment", "purpose", "calling", "stuck in life", "not progressing", "no breakthrough", "failure at the point of success", "almost there", "destiny blocked", "star bewitched", "fulfil destiny"]
+    },
+
+    {
+      "title": "Coven Powers and Witchcraft Attacks",
+      "answer": "Pastor Isaac Onwordi teaches in Prayers for Warriors that a coven is a secret stronghold of satanic powers where evil forces plan and execute attacks including failure, rejection, sickness, delayed marriage, poverty, and accidents. Coven powers include: witchcraft, occult powers, marine witchcraft, and household evil powers.\n\nPrayer: \"Every coven power assigned against my life, be arrested by fire in Jesus name. Every curse and spell issued against me from the coven, backfire now in Jesus name. I scatter every evil gathering against me by the fire of the Holy Ghost in Jesus name. Amen.\"\n\nFor full deliverance: (+264) 061-309876.",
+      "keywords": ["coven", "witchcraft attack", "occult", "spell", "curse", "hex", "marine witchcraft", "serpentine spirit", "household enemy", "family enemy", "satanic attack", "evil gathering", "coven powers prayer"]
+    },
+
+    {
+      "title": "Breaking Collective Bondages and Family Curses",
+      "answer": "A collective bondage is an evil pattern that runs through a family or bloodline, sponsored by a shared curse or evil covenant. Pastor Isaac teaches that believers must refuse to suffer what others in their bloodline suffer.\n\nPrayer: \"Every evil covenant in my bloodline keeping me bound, break and release me by fire in Jesus name. Every evil pattern of my family pursuing me, break, die and release me forever in Jesus name. Father, instead of collective bondage, let me inherit Abraham's blessings in Jesus name. Amen.\"\n\nBook: Prayers for Warriors — lcccstore.com",
+      "keywords": ["collective bondage", "family curse", "generational curse", "bloodline curse", "ancestral bondage", "family pattern", "breaking curses", "evil covenant", "tribal curse", "bloodline prayer"]
+    },
+
+    {
+      "title": "Deliverance from Fear",
+      "answer": "Pastor Isaac teaches in Prayers for Warriors that fear is a demonic spirit that must be confronted and expelled — not managed.\n\nPrayer: \"Every power hunting for me because of what I will become, die in Jesus name. Every fear of the unknown, be paralysed by fire in Jesus name. Arrows of fear and anxiety fired into my life, come out now by fire in Jesus name. Power of divine boldness, fall upon me now in Jesus name. I forcefully evict every fear from my life from today in Jesus name. Amen.\"\n\nScripture: 'For God has not given us a spirit of fear, but of power and of love and of a sound mind.' — 2 Timothy 1:7",
+      "keywords": ["fear", "anxiety", "scared", "phobia", "afraid", "spirit of fear", "panic", "terror", "timid", "no confidence", "prayer for boldness", "fear deliverance"]
+    },
+
+    {
+      "title": "Healing a Damaged Spirit",
+      "answer": "Pastor Isaac teaches in PowerShift that every human being is a spirit, having a soul and living in a body. A healthy spirit is essential for spiritual growth, healing, and breakthrough. Your spirit can be crushed by habitual sin, sorrow, and an unforgiving heart.\n\nPrayer: \"Father, heal my damaged spirit. Restore my spirit-man to full strength. Let Your fire fall and revive every area of my spiritual life. I receive a sound and strong spirit in the name of Jesus. Amen.\"\n\nScripture: 'But grow in the grace and knowledge of our Lord and Saviour Jesus Christ.' — 2 Peter 3:18",
+      "keywords": ["damaged spirit", "spiritual growth", "spirit man", "weak spiritually", "not growing spiritually", "spiritual revival", "restore spirit", "dry spiritually", "far from god", "spiritually dead", "spiritual healing"]
+    },
+
+    {
+      "title": "How to Handle Troubling Dreams",
+      "answer": "Pastor Isaac Onwordi teaches in PowerShift that dreams are spiritual means of communication. God uses dreams to reveal secrets and give warnings (Joel 2:28). But there are also evil dreams planted by the enemy.\n\nCommon warning dreams include: being attacked, eating in dreams, sexual dreams with unknown persons, seeing dead people, or being chased. These may signal spiritual attacks that need immediate prayer after waking.\n\nPrayer after an evil dream: \"Every evil program activated against me through this dream, be cancelled by the blood of Jesus. I reject every satanic message in that dream. Let it not manifest in my life in Jesus name. Amen.\"\n\nFor dream interpretation and deliverance: (+264) 061-309876.",
+      "keywords": ["dreams", "evil dreams", "nightmares", "dream interpretation", "spiritual dreams", "eating in dreams", "sexual dreams", "being chased in dream", "falling in dream", "dead people in dreams", "what does my dream mean", "dream and prayer"]
+    },
+
+    {
+      "title": "Academic Bewitchment and Prayer for Studies",
+      "answer": "Pastor Isaac Onwordi teaches in the Bewitchment book that academic bewitchment attacks a person's ability to study, learn, and pass examinations. Signs include: forgetting what you study, failing despite preparation, and dreams of unfinished exams.\n\nPrayer for Academic Breakthrough: \"Every evil covenant and decree against my academic success, break and scatter in Jesus name. Curses blocking my studies, be annulled by fire in Jesus name. Powers of academic failure, die by fire in Jesus name. My brain is anointed for excellence in Jesus name. Amen.\"\n\nResources: Prayers for Warriors and PowerShift — lcccstore.com.",
+      "keywords": ["academic bewitchment", "studies", "exam failure", "failing exams", "can't pass", "forgetting when studying", "prayer for exams", "academic prayer", "school prayer", "university prayer", "pass exams prayer", "study help"]
+    },
+
+    {
+      "title": "Fasting and Prayer",
+      "answer": "Pastor Isaac Onwordi teaches in PowerShift that fasting is very effective in dealing with difficult and prolonged situations. Jesus fasted before overcoming the enemy.\n\nPrinciples of effective fasting:\n1. Fasting must be done in righteousness and holiness (Isaiah 58)\n2. Choose the kind of fast appropriate to your need\n3. Combine fasting with targeted, aggressive prayer\n4. Live a fasted Christian life as a lifestyle\n\nScripture: 'You who call on the LORD, give yourselves no rest, and give Him no rest...' — Isaiah 62:6-7",
+      "keywords": ["fasting", "fast", "prayer and fasting", "dry fast", "how to fast", "fasting prayer", "why fast", "benefits of fasting", "fasting instructions"]
+    },
+
+    {
+      "title": "Power Shift — What It Means",
+      "answer": "A Power Shift, as taught by Pastor Isaac Onwordi, is a divine switch of positions between the oppressed and the oppressor. Through salvation, prayer, fasting, and the blood of Jesus, the believer can provoke a divine shift that moves the power from the enemy's side to God's side — transforming every area of their life. This is the core message of LCCC's ministry.",
+      "keywords": ["power shift", "what is power shift", "shift", "reverse situation", "turnaround", "breakthrough", "divine shift", "power change", "from oppressed to blessed"]
+    },
+
+    {
+      "title": "Fresh Fire of God Prayer",
+      "answer": "A powerful prayer for those who need a fresh move of the Holy Spirit:\n\n\"Fresh fire of God that evil cannot withstand, fall upon me and my family in Jesus name. Fresh fire of God that brings great spiritual revival, fall upon my family and let there be an outburst of Holy Ghost revival in Jesus name. Fresh fire of God that will make evil flee from me, fall upon us now. God of fresh fire, arise and visit my life afresh today in Jesus name. Amen.\" 🔥",
+      "keywords": ["fresh fire", "holy ghost fire", "fire of god", "revival fire", "holy spirit fire", "fire prayer", "anointing of fire", "fresh anointing", "revive me"]
+    }
+
+  ]
+}

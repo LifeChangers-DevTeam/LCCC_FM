@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LCCC FM Content Studio</title>
+  <link rel="stylesheet" href="css/main_css.css" />
+</head>
+<body class="fade-in">
+  <div class="background"><img src="resources/background.png" alt="background"></div>
+
+  <main class="container content-studio">
+    <div class="brand-header">
+      <img class="brand-logo" src="resources/Family FM Logo.png" alt="LCCC Family FM logo">
+    </div>
+
+    <h1>Weekly Content Studio</h1>
+    <p class="studio-note">Use this page to manage the weekly image cards and export an updated <code>data/ministry-content.json</code> file.</p>
+    <p class="studio-note">Because the site is static, images still need to be placed in <code>resources/</code> before publishing.</p>
+    <div class="studio-link-row">
+      <a href="knowledge-studio.html" class="secondary-button">Open Knowledge Studio</a>
+    </div>
+
+    <section class="studio-panel">
+      <h3>Current Weekly Updates</h3>
+      <div id="studioUpdatesList" class="studio-updates-list"></div>
+    </section>
+
+    <section class="studio-panel">
+      <h3>Add or Edit Update</h3>
+      <form id="studioForm" class="studio-form">
+        <input type="hidden" id="studioEditIndex" value="" />
+        <label>
+          Title
+          <input id="studioTitle" type="text" required />
+        </label>
+        <label>
+          Description
+          <textarea id="studioDescription" rows="4" required></textarea>
+        </label>
+        <label>
+          Image Path
+          <input id="studioImage" type="text" placeholder="resources/your-image.jpg" required />
+        </label>
+        <div class="studio-actions">
+          <button type="submit" class="toggle-btn">Save Update</button>
+          <button type="button" id="studioReset" class="secondary-button">Clear Form</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="studio-panel">
+      <h3>Export</h3>
+      <p class="studio-note">Download the updated JSON and replace <code>data/ministry-content.json</code> in the repo with it.</p>
+      <p class="studio-note">When weekly updates change, rebuild the knowledge index before deploy so the server-side assistant can answer from the latest content.</p>
+      <button id="studioExport" type="button" class="toggle-btn">Download Updated JSON</button>
+    </section>
+  </main>
+
+  <script src="js/content-studio.js"></script>
+</body>
+</html>

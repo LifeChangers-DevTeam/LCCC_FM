@@ -1,0 +1,23 @@
+{
+  "name": "lccc-radio-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for LCCC Radio API proxying",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "build:knowledge-index": "node scripts/build-knowledge-index.js",
+    "build:knowledge-index:lexical": "node scripts/build-knowledge-index.js --without-embeddings"
+  },
+  "keywords": [
+    "netlify",
+    "functions",
+    "api",
+    "proxy"
+  ],
+  "author": "LCCC Tech Team",
+  "license": "ISC",
+  "dependencies": {
+    "@netlify/plugin-sitemap": "^0.8.1",
+    "node-fetch": "^2.7.0"
+  }
+}

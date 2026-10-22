@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LCCC FM Knowledge Studio</title>
+  <link rel="stylesheet" href="css/main_css.css" />
+</head>
+<body class="fade-in">
+  <div class="background"><img src="resources/background.png" alt="background"></div>
+
+  <main class="container content-studio">
+    <div class="brand-header">
+      <img class="brand-logo" src="resources/Family FM Logo.png" alt="LCCC Family FM logo">
+    </div>
+
+    <h1>Church Assistant Knowledge Studio</h1>
+    <p class="studio-note">Use this page to grow the assistant knowledge base and export an updated <code>data/church-knowledge.json</code> file.</p>
+    <p class="studio-note">The assistant is retrieval-based, so stronger answers come from better titles, better answers, and richer keywords for each entry.</p>
+
+    <section class="studio-panel">
+      <div class="studio-toolbar">
+        <h3>Assistant Settings</h3>
+        <p id="knowledgeStats" class="studio-summary"></p>
+      </div>
+      <form id="knowledgeSettingsForm" class="studio-form">
+        <label>
+          Welcome Message
+          <textarea id="knowledgeWelcome" rows="4" required></textarea>
+        </label>
+        <label>
+          Fallback Message
+          <textarea id="knowledgeFallback" rows="4" required></textarea>
+        </label>
+        <label>
+          Suggested Questions
+          <textarea id="knowledgeSuggestedQuestions" rows="6" placeholder="One question per line"></textarea>
+        </label>
+      </form>
+    </section>
+
+    <section class="studio-panel">
+      <div class="studio-toolbar">
+        <h3>Current Knowledge Entries</h3>
+        <p class="studio-summary">Edit entries to improve what the chatbot can answer.</p>
+      </div>
+      <div id="knowledgeEntriesList" class="studio-updates-list"></div>
+    </section>
+
+    <section class="studio-panel">
+      <h3>Add or Edit Knowledge Entry</h3>
+      <form id="knowledgeEntryForm" class="studio-form">
+        <input type="hidden" id="knowledgeEditIndex" value="" />
+        <label>
+          Title
+          <input id="knowledgeTitle" type="text" required />
+        </label>
+        <label>
+          Answer
+          <textarea id="knowledgeAnswer" class="large-textarea" rows="9" required></textarea>
+        </label>
+        <label>
+          Keywords
+          <textarea id="knowledgeKeywords" rows="4" placeholder="Comma-separated phrases, e.g. prayer, healing, request prayer"></textarea>
+        </label>
+        <label>
+          Related Questions
+          <textarea id="knowledgeRelatedQuestions" rows="4" placeholder="One question per line"></textarea>
+        </label>
+        <label>
+          Synonyms
+          <textarea id="knowledgeSynonyms" rows="3" placeholder="Comma-separated alternate phrases"></textarea>
+        </label>
+        <div class="studio-actions">
+          <button type="submit" class="toggle-btn">Save Entry</button>
+          <button type="button" id="knowledgeReset" class="secondary-button">Clear Form</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="studio-panel">
+      <h3>Export</h3>
+      <p class="studio-note">Download the updated JSON and replace <code>data/church-knowledge.json</code> in the repo with it.</p>
+      <p class="studio-note">After changing this dataset, rebuild <code>data/church-knowledge-index.json</code> before deploying if you want the server-side RAG assistant to use the new material.</p>
+      <div class="studio-actions">
+        <button id="knowledgeExport" type="button" class="toggle-btn">Download Updated JSON</button>
+        <a href="content-studio.html" class="secondary-button">Open Content Studio</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/knowledge-studio.js"></script>
+</body>
+</html>

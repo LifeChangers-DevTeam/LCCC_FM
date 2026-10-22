@@ -1,0 +1,60 @@
+{
+  "notificationMessage": "Stay updated with the latest announcements, prayer focus, and ministry highlights.",
+  "notifications": [
+    {
+      "label": "This Week",
+      "title": "Prayer Focus",
+      "text": "Join the church family in prayer and expectant faith throughout the week."
+    },
+    {
+      "label": "Broadcast",
+      "title": "Latest Media",
+      "text": "The homepage highlights the newest ministry visuals without editing the page markup."
+    },
+    {
+      "label": "Bookstore",
+      "title": "Current Release",
+      "text": "Visit the bookstore section below for the latest resources from the ministry."
+    }
+  ],
+  "weeklyUpdates": [
+    {
+      "title": "2026 Declaration",
+      "description": "2 Corinthians 4:13. We believe and therefore we speak.",
+      "image": "resources/Decleration@2026.jpg"
+    },
+    {
+      "title": "Weekly Prayer",
+      "description": "A prayerless Christian is a powerless Christian. Join us weekly and charge with prayer.",
+      "image": "resources/WeeklyCharge.jpg"
+    },
+    {
+      "title": "God's Word",
+      "description": "Dive deep into the Word of God and grow in wisdom week by week.",
+      "image": "resources/WeeklyWord.jpg"
+    },
+    {
+      "title": "Word in the Lot",
+      "description": "Encouragement and direction for the week ahead.",
+      "image": "resources/WordintheLot.jpg"
+    },
+    {
+      "title": "Salvation Series",
+      "description": "A clear salvation message and a simple prayer of faith for anyone receiving Jesus.",
+      "image": "resources/SalvationSeries.jpg"
+    },
+    {
+      "title": "Theme of the Year",
+      "description": "Isaiah 30:21. Your ears shall hear a word behind you saying, This is the way, walk in it.",
+      "image": "resources/2026.jpg"
+    }
+  ],
+  "prayerCta": {
+    "title": "Need A Prayer?",
+    "description": "Share your prayer request with the church team and let us stand with you in faith.",
+    "whatsappUrl": "https://wa.me/264817813918?text=Hello%20Life%20Changers%20Family%20Radio%2C%20I%20need%20prayer.",
+    "email": "liamroyalty@icloud.com",
+    "officeHours": "Prayer team follow-up is typically handled during church office hours.",
+    "successMessage": "Your prayer request has been prepared. If the form does not submit on your device, use the WhatsApp or email button."
+  }
+}

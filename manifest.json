@@ -1,0 +1,61 @@
+{
+  "name": "Life Changers Family Radio - LCCC FM",
+  "short_name": "LCCC FM",
+  "description": "Life Changing Christian Church Family Radio - 24/7 Christian Broadcasting, Sermons, Gospel Music, and Community Updates from Windhoek, Namibia",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#860b46",
+  "background_color": "#0a1628",
+  "categories": ["entertainment", "music", "lifestyle", "news"],
+  "lang": "en-US",
+  "dir": "ltr",
+
+"icons": [
+  {
+    "src": "/resources/web-app-manifest-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "any maskable"
+  },
+  {
+    "src": "/resources/web-app-manifest-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "any maskable"
+  },
+  {
+    "src": "/resources/favicon-96x96.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }
+],
+
+  "shortcuts": [
+    {
+      "name": "Listen Live",
+      "short_name": "Radio",
+      "description": "Start listening to LCCC FM immediately",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/resources/web-app-manifest-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Gallery",
+      "short_name": "Gallery",
+      "description": "View our latest posts and updates",
+      "url": "/gallery.html",
+      "icons": [
+        {
+          "src": "/resources/web-app-manifest-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

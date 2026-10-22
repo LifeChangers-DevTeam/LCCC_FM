@@ -1,0 +1,588 @@
+/* =========================================================
+   GLASSMORPHISM CAROUSEL & LIGHTBOX STYLES
+   ========================================================= */
+
+/* ======================
+   CAROUSEL STYLES
+====================== */
+#app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.item.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.item:not(.active) {
+  transform: scale(0.95);
+}
+
+.content {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  max-width: 500px;
+  z-index: 2;
+      background: rgb(0 0 0 / 44%);
+    backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  animation: fadeInUp 0.6s ease;
+}
+
+.content .name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content .des {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.view-btn {
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+  z-index: 3;
+}
+
+.button button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button button:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption {
+  text-align: center;
+  margin-top: 30px;
+  padding: 0 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-caption h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #112c41;
+  text-shadow: 0 0 15px aliceblue;
+  margin-bottom: 8px;
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* ======================
+   GLASSMORPHISM LIGHTBOX
+====================== */
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.lightbox-container {
+  position: relative;
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transform: scale(0.9);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox.active .lightbox-container {
+  transform: scale(1);
+}
+
+/* Close Button */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Zoom Controls */
+.lightbox-zoom-controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 15;
+}
+
+.zoom-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoom-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Image Container - Critical for proper display */
+.lightbox-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
+
+/* Video Support */
+.lightbox-video {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  display: none;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.lightbox-video[style*="display: block"] {
+  display: block !important;
+}
+
+.lightbox-image[style*="display: none"] {
+  display: none !important;
+}
+
+.lightbox-image-wrapper .lightbox-image,
+.lightbox-image-wrapper .lightbox-video {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.lightbox-image.zoomed {
+  cursor: move;
+}
+
+.lightbox-image.dragging {
+  cursor: grabbing;
+}
+
+/* Navigation Buttons */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 12;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+/* Image Info Panel */
+.lightbox-info {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 20px 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 11;
+}
+
+.lightbox-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.lightbox-counter {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+/* ======================
+   ANIMATIONS
+====================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================
+   RESPONSIVE DESIGN
+====================== */
+@media (max-width: 768px) {
+  .img-container {
+    height: 450px;
+    border-radius: 15px;
+  }
+
+  .content {
+    left: 20px;
+    bottom: 20px;
+    padding: 20px;
+    max-width: calc(100% - 40px);
+  }
+
+  .content .name {
+    font-size: 1.8rem;
+  }
+
+  .content .des {
+    font-size: 1rem;
+  }
+
+  .button {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;
+  }
+
+  .button button {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .lightbox-nav {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .lightbox-prev {
+    left: 15px;
+  }
+
+  .lightbox-next {
+    right: 15px;
+  }
+
+  .lightbox-close {
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .lightbox-zoom-controls {
+    top: 15px;
+    left: 15px;
+    flex-direction: column;
+  }
+
+  .zoom-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox-info {
+    bottom: 20px;
+    padding: 15px 20px;
+    width: 85%;
+  }
+
+  .lightbox-title {
+    font-size: 1.4rem;
+  }
+
+  .lightbox-description {
+    font-size: 0.95rem;
+  }
+
+  .lightbox-counter {
+    font-size: 0.85rem;
+  }
+
+  .carousel-caption h4 {
+    font-size: 1.4rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .lightbox-image {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-container {
+    height: 350px;
+  }
+
+  .content {
+    left: 15px;
+    bottom: 15px;
+    padding: 15px;
+    max-width: calc(100% - 30px);
+  }
+
+  .content .name {
+    font-size: 1.5rem;
+  }
+
+  .content .des {
+    font-size: 0.9rem;
+  }
+
+  .view-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .lightbox-image {
+    max-height: 75vh;
+  }
+
+  .lightbox-info {
+    bottom: 15px;
+    padding: 12px 18px;
+  }
+
+  .lightbox-title {
+    font-size: 1.2rem;
+  }
+
+  .lightbox-description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .img-container {
+    height: 300px;
+  }
+
+  .content .des {
+    display: none;
+  }
+
+  .button {
+    bottom: -50px;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .img-container {
+    height: 500px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+  .img-container {
+    height: 650px;
+  }
+}
