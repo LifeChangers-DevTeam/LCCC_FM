@@ -16,10 +16,10 @@ class YouTubeVideoLoader {
       // YouTube Channel ID for Life Changers TV
       channelId: 'UCqKbyuM7cqlZGUZCeaVssjw',
       
-      // Prefer runtime config when available, otherwise keep the current fallback.
+      // Prefer runtime config when available; otherwise requests go through the Netlify function.
       apiKey: hasRuntimeApiKey
         ? runtimeApiKey
-        : 'AIzaSyDiV4Gn9I3w5VW19O7sj8x4cFrj4iluRQ0',
+        : '',
       
       // Prefer the Netlify function first so env-based deploys work without client exposure.
       tryDirectFirst: false,
