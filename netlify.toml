@@ -15,7 +15,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Type = "application/xml; charset=utf-8"
     Cache-Control = "public, max-age=86400"
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
