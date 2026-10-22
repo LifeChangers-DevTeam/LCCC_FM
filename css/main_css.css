@@ -1445,6 +1445,77 @@ button.mainbutton {
 }
 
 /*======================
+Weekly Service & Location
+========================*/
+
+/* LCCC FM — responsive weekly services section */
+.weekly-services {
+  --ws-navy: #202746; --ws-burgundy: #842f43; --ws-gold: #d7b66a;
+  --ws-ink: #22243a; --ws-muted: #62677a;
+  position: relative; isolation: isolate; width: min(100% - 2rem, 1080px);
+  margin: clamp(2.5rem, 6vw, 5rem) auto; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.42); border-radius: 26px;
+  color: var(--ws-ink); text-align: left;
+  background: radial-gradient(ellipse at 12% 0%, rgba(215,182,106,.18), transparent 38%), linear-gradient(145deg,#fffdf9 0%,#f4f1ed 56%,#fff 100%);
+  box-shadow: 0 24px 70px rgba(10,16,38,.2);
+}
+.weekly-services::before { content:""; position:absolute; inset:0 0 auto; height:7px; background:linear-gradient(90deg,var(--ws-navy),var(--ws-burgundy) 56%,var(--ws-gold)); }
+.weekly-services__inner { padding:clamp(1.25rem,4vw,3.25rem); }
+.weekly-services__header { max-width:720px; margin:0 auto clamp(1.5rem,4vw,2.5rem); text-align:center; }
+.weekly-services__eyebrow { margin:0 0 .5rem; color:var(--ws-burgundy); font-size:.75rem; font-weight:800; letter-spacing:.17em; text-transform:uppercase; }
+.weekly-services__header h2 { margin:0; color:var(--ws-navy); font-size:clamp(1.8rem,4.6vw,3.25rem); font-weight:900; letter-spacing:-.045em; line-height:1.12; }
+.weekly-services__header h2 span { color:var(--ws-burgundy); }
+.weekly-services__intro { max-width:560px; margin:.9rem auto 0; color:var(--ws-muted); font-size:clamp(.95rem,1.7vw,1.08rem); line-height:1.7; }
+.weekly-services__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.weekly-service-card { position:relative; min-width:0; padding:clamp(1rem,2.2vw,1.5rem); overflow:hidden; border:1px solid rgba(32,39,70,.1); border-radius:18px; background:rgba(255,255,255,.9); box-shadow:0 9px 26px rgba(32,39,70,.07); transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease; }
+.weekly-service-card::after { content:""; position:absolute; inset:0 0 auto; height:4px; background:var(--ws-navy); }
+.weekly-service-card--tuesday::after { background:var(--ws-burgundy); }
+.weekly-service-card--thursday::after { background:var(--ws-gold); }
+.weekly-service-card:hover { transform:translateY(-4px); border-color:rgba(132,47,67,.28); box-shadow:0 16px 34px rgba(32,39,70,.13); }
+.weekly-service-card__top { display:flex; align-items:center; justify-content:space-between; gap:.5rem; }
+.weekly-service-card__day { color:var(--ws-navy); font-size:clamp(.8rem,1.6vw,1rem); font-weight:900; letter-spacing:.08em; }
+.weekly-service-card__icon { display:grid; width:42px; height:42px; flex:0 0 42px; place-items:center; border-radius:13px; color:var(--ws-navy); background:#eef0f7; font-size:1.25rem; }
+.weekly-service-card--tuesday .weekly-service-card__icon { color:var(--ws-burgundy); background:#f7eaf0; }
+.weekly-service-card--thursday .weekly-service-card__icon { color:#765b1d; background:#f8f0dc; }
+.weekly-service-card__type { min-height:3.2em; margin:1rem 0 .4rem; color:var(--ws-muted); font-size:.96rem; font-weight:650; line-height:1.5; }
+.weekly-service-card__time { display:flex; align-items:baseline; gap:.4rem; margin:0; color:var(--ws-navy); white-space:nowrap; }
+.weekly-service-card__time strong { font-size:clamp(1.8rem,3.3vw,2.5rem); font-weight:900; letter-spacing:-.05em; line-height:1.2; }
+.weekly-service-card__time span { color:var(--ws-burgundy); font-size:.85rem; font-weight:900; }
+.weekly-service-card__note { margin:.7rem 0 0; color:var(--ws-muted); font-size:.84rem; line-height:1.55; }
+.weekly-services__details { display:grid; grid-template-columns:1.15fr .85fr; gap:1rem; margin-top:1rem; }
+.weekly-services__location,.weekly-services__contact { display:flex; align-items:flex-start; gap:1rem; padding:clamp(1rem,2.5vw,1.5rem); border:1px solid rgba(32,39,70,.09); border-radius:18px; background:rgba(255,255,255,.72); }
+.weekly-services__detail-icon { display:grid; width:44px; height:44px; flex:0 0 44px; place-items:center; border-radius:14px; color:#fff; background:linear-gradient(145deg,var(--ws-navy),var(--ws-burgundy)); font-size:1.2rem; }
+.weekly-services__details h3 { margin:0 0 .4rem; color:var(--ws-navy); font-size:1.05rem; font-weight:850; }
+.weekly-services__details p,.weekly-services__contact a { color:var(--ws-muted); font-size:.9rem; line-height:1.65; }
+.weekly-services__details p { margin:0 0 .6rem; }
+.weekly-services__contact a { display:block; width:fit-content; margin:.16rem 0; overflow-wrap:anywhere; text-decoration:none; transition:color .2s ease; }
+.weekly-services__contact a:hover,.weekly-services__text-link:hover { color:var(--ws-burgundy); }
+.weekly-services__text-link { display:inline-flex; align-items:center; gap:.35rem; color:var(--ws-burgundy); font-size:.9rem; font-weight:800; text-decoration:none; }
+.weekly-services__connect { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:1rem; padding:1rem 1.25rem; border-radius:16px; color:#fff; background:linear-gradient(110deg,var(--ws-navy),#303452 58%,var(--ws-burgundy)); }
+.weekly-services__connect p { margin:0; font-size:.92rem; font-weight:700; }
+.weekly-services__socials { display:flex; align-items:center; gap:.55rem; }
+.weekly-services__socials a { display:grid; width:40px; height:40px; place-items:center; border:1px solid rgba(255,255,255,.26); border-radius:12px; color:#fff; background:rgba(255,255,255,.08); font-size:1.1rem; text-decoration:none; transition:transform .2s ease,color .2s ease,background .2s ease; }
+.weekly-services__socials a:hover { transform:translateY(-2px); color:var(--ws-navy); background:var(--ws-gold); }
+.weekly-services a:focus-visible { outline:3px solid var(--ws-gold); outline-offset:4px; }
+@media (max-width:760px) {
+  .weekly-services__grid,.weekly-services__details { grid-template-columns:1fr; }
+  .weekly-service-card { padding:1.1rem 1.2rem; }
+  .weekly-service-card__type { min-height:0; margin-top:.7rem; }
+  .weekly-service-card__time strong { font-size:2rem; }
+}
+@media (max-width:480px) {
+  .weekly-services { width:calc(100% - 1rem); border-radius:20px; }
+  .weekly-services__inner { padding:1.2rem .9rem; }
+  .weekly-services__connect { align-items:flex-start; flex-direction:column; }
+  .weekly-services__socials { flex-wrap:wrap; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .weekly-service-card,.weekly-services__socials a,.weekly-services__contact a { transition:none; }
+  .weekly-service-card:hover,.weekly-services__socials a:hover { transform:none; }
+}
+
+
+/*======================
 Scroll up Button 
 ========================*/
 .back-to-top-button {
