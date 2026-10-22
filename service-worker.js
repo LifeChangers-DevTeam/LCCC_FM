@@ -1,6 +1,6 @@
 /**
  * SERVICE WORKER - LCCC Family Radio PWA
- * Version: 3.2.0
+ * Version: 3.2.1
  * Fixes: Analytics support, origin check performance, size comparison bug,
  *        offline page reliability, PWA install/update flow
  */
@@ -9,7 +9,7 @@
 // CONFIGURATION
 // ============================================================================
 const CONFIG = {
-  version: 'v3.2.0',
+  version: 'v3.2.1',
   timeouts: { api: 10000 },
   sizes: { maxImageBytes: 5 * 1024 * 1024 },
 };
@@ -25,14 +25,17 @@ const OFFLINE_AUDIO = '/resources/offline-audio.mp3';
 
 // APP_SHELL: Keep this small and reliable.
 // Any single 404 here will abort the entire install.
+// Versioned asset URLs must match the ?v= query strings used in the HTML
+// so precached entries are served on repeat visits.
+const ASSET_VERSION = '3.2.1';
 const APP_SHELL = [
   '/',
   '/index.html',
   '/gallery.html',
   '/offline.html',
-  '/css/main_css.css',
-  '/css/carousel-lightbox.css',
-  '/css/gallery.css',
+  `/css/main_css.css?v=${ASSET_VERSION}`,
+  `/css/carousel-lightbox.css?v=${ASSET_VERSION}`,
+  `/css/gallery.css?v=${ASSET_VERSION}`,
   '/manifest.json',
   '/resources/background.png',
   '/resources/favicon.png',

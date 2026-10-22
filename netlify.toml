@@ -1,7 +1,7 @@
 # =====================================
 # NETLIFY CONFIGURATION
 # Project: Life Changers Family Radio
-# Version: 3.2.0 - Analytics + Security
+# Version: 3.2.1 - Analytics + Security
 # =====================================
 
 [build]
@@ -69,7 +69,8 @@
         https://broadcast.shoutcheap.com;
       font-src 'self' data:
         https://fonts.gstatic.com
-        https://cdnjs.cloudflare.com;
+        https://cdnjs.cloudflare.com
+        https://cdn.jsdelivr.net;
       connect-src 'self'
         https://api.allorigins.win
         https://api.codetabs.com
@@ -93,6 +94,8 @@
       frame-ancestors 'self';
       upgrade-insecure-requests;
     """
+    # HTML must revalidate so new releases (and new ?v= asset URLs) are picked up
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # =====================================
 # HTML PAGES CSP (covers all .html files)
@@ -122,7 +125,8 @@
         https://broadcast.shoutcheap.com;
       font-src 'self' data:
         https://fonts.gstatic.com
-        https://cdnjs.cloudflare.com;
+        https://cdnjs.cloudflare.com
+        https://cdn.jsdelivr.net;
       connect-src 'self'
         https://api.allorigins.win
         https://api.codetabs.com
@@ -166,6 +170,7 @@
         https://www.google-analytics.com;
       style-src 'self' 'unsafe-inline'
         https://fonts.googleapis.com
+        https://cdn.jsdelivr.net
         https://cdnjs.cloudflare.com;
       img-src 'self' data: blob: https:;
       connect-src 'self'
@@ -176,7 +181,9 @@
         https://analytics.google.com
         https://www.googletagmanager.com;
       font-src 'self'
-        https://fonts.gstatic.com;
+        https://fonts.gstatic.com
+        https://cdnjs.cloudflare.com
+        https://cdn.jsdelivr.net;
       worker-src 'self' blob:;
       upgrade-insecure-requests;
     """
@@ -207,6 +214,9 @@
 
 # =====================================
 # STATIC ASSETS - AGGRESSIVE CACHING
+# Safe only because every HTML reference to /js and /css carries a
+# release version (?v=X.Y.Z). Bump it whenever those files change,
+# along with ASSET_VERSION in service-worker.js.
 # =====================================
 
 [[headers]]
@@ -224,7 +234,8 @@
 [[headers]]
   for = "/resources/*.{jpg,jpeg,png,gif,webp,svg,ico,avif}"
   [headers.values]
-    Cache-Control = "public, max-age=2592000, immutable"
+    # Not versioned, so no "immutable" — browsers revalidate after 7 days
+    Cache-Control = "public, max-age=604800"
     Access-Control-Allow-Origin = "*"
 
 [[headers]]
