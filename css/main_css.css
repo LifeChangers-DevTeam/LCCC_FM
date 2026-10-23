@@ -1322,6 +1322,7 @@ button.mainbutton {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
   backdrop-filter: blur(18px);
   opacity: 0;
+  overflow:scroll;
   pointer-events: none;
   transform: translateY(16px) scale(0.98);
   transition: opacity 0.25s ease, transform 0.25s ease;
